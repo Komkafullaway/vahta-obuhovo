@@ -1,26 +1,198 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #111827;
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #111827, #1e40af);
+  color: white;
+  border-radius: 28px;
+  padding: 48px 32px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  background: #22c55e;
+  color: #052e16;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.salary {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #fde68a;
+}
+
+.subtitle {
+  font-size: 20px;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  padding: 16px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.primary {
+  background: #22c55e;
+  color: #052e16;
+}
+
+.secondary {
+  background: white;
+  color: #111827;
+}
+
+.card,
+.form {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.grid div {
+  background: #f1f5f9;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.grid b {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.grid span {
+  color: #475569;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.accent {
+  background: #ecfdf5;
+  border: 2px solid #22c55e;
+}
+
+.accent p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.form {
+  background: #111827;
+  color: white;
+}
+
+.form p {
+  color: #d1d5db;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 17px;
+}
+
+button {
+  background: #22c55e;
+  color: #052e16;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.small {
+  font-size: 15px;
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 14px;
+  }
+
+  .hero {
+    padding: 34px 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .salary {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .form {
+    padding: 22px;
+  }
 }
